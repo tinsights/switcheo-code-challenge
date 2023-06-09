@@ -1,0 +1,76 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/tinaes/Projects/algos/switcheo-code-challenge/src/problem5/contracts/TokenBalanceRetriever.sol": {
+      "lastModificationDate": 1686301352226,
+      "contentHash": "bbace310eeb8b8977c82898773670cd4",
+      "sourceName": "contracts/TokenBalanceRetriever.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "ERC20",
+        "TokenBalanceRetriever"
+      ]
+    },
+    "/Users/tinaes/Projects/algos/switcheo-code-challenge/src/problem5/contracts/Token.sol": {
+      "lastModificationDate": 1686300455574,
+      "contentHash": "38197bb9748bc29cd39d6261af93fd3b",
+      "sourceName": "contracts/Token.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Token"
+      ]
+    }
+  }
+}
