@@ -28,31 +28,33 @@ const sum_to_n_d = function (n) {
   return result;
 };
 
-// 5: 4^2 - 1 == 15
-// 6: 5^2 - 4 == 21
-// 7: 6^2 - 8 == 28
-// 8: 7^2 - 13 == 36
-// 9: 8^2 - 19 == 45
-// 10: 9^2 - 26 == 55
-
 const sum_to_n_e = function (n) {
-  return n > 4 ? (n - 1) ** 2 - helper(n - 4) : sum_to_n_a(n);
+  return n === 0 ? 0 : (n - 1) ** 2 - (sumFromAtoB(-1, n - 3) - 1);
 
-  function helper(n) {
-    let diff = 3;
-    let result = 1;
-    while (n > 1) {
-      result += diff;
-      diff += 1;
-      n -= 1;
+  // sums from any integer a to any integer b
+  function sumFromAtoB(a, b) {
+    let result = 0;
+    while (a < b) {
+      result += a;
+      a += 1;
+    }
+    while (a >= b) {
+      result += a;
+      a -= 1;
     }
     return result;
   }
 };
-
-console.log(sum_to_n_e(5));
-console.log(sum_to_n_e(6));
-console.log(sum_to_n_e(7));
-console.log(sum_to_n_e(8));
-console.log(sum_to_n_e(9));
-console.log(sum_to_n_e(10));
+// sums from any integer a to any integer b
+function sumFromAtoB(a, b) {
+  let result = 0;
+  while (a < b) {
+    result += a;
+    a += 1;
+  }
+  while (a >= b) {
+    result += a;
+    a -= 1;
+  }
+  return result;
+}
