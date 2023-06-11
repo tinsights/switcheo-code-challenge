@@ -24,26 +24,26 @@ const sum_to_n_d = function (n) {
   return result;
 };
 
-const sum_to_n_e = function (n) {
-  return n === 0 ? 0 : (n - 1) ** 2 - (sumFromAtoB(-1, n - 3) - 1);
+const sum_to_n_e = (n) => (n === 0 ? 0 : (n - 1) ** 2 - (sumFromAtoB(-1, n - 3) - 1));
+const sum_to_n_f = (n) => (n === 0 ? 0 : sum_to_n_f(n - 1) * 2 - sumFromAtoB(-1, n - 2));
 
-  // sums from any integer a to any integer b
-  function sumFromAtoB(a, b) {
-    let result = 0;
-    while (a < b) {
-      result += a;
-      a += 1;
-    }
-    while (a >= b) {
-      result += a;
-      a -= 1;
-    }
-    return result;
+// sums from any integer a to any integer b
+function sumFromAtoB(a, b) {
+  let result = 0;
+  while (a < b) {
+    result += a;
+    a += 1;
   }
-};
+  while (a >= b) {
+    result += a;
+    a -= 1;
+  }
+  return result;
+}
 
 console.log(sum_to_n_a(5));
 console.log(sum_to_n_b(6));
 console.log(sum_to_n_c(7));
 console.log(sum_to_n_d(-8));
 console.log(sum_to_n_e(9));
+console.log(sum_to_n_f(10));
