@@ -22,15 +22,12 @@ const sum_to_n_f = (n) => (n === 0 ? 0 : sum_to_n_f(n - 1) * 2 - sumFromAtoB(-1,
 // sums from any integer a to any integer b
 function sumFromAtoB(a, b) {
   let result = 0;
-  while (a < b) {
+  const sign = a < b ? 1 : -1;
+  while (a !== b) {
     result += a;
-    a += 1;
+    a += sign * 1;
   }
-  while (a >= b) {
-    result += a;
-    a -= 1;
-  }
-  return result;
+  return result + a;
 }
 
 console.log(sum_to_n_a(5));
