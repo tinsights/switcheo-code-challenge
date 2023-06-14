@@ -15,28 +15,30 @@
     <link href="style.css" rel="stylesheet" />
   </head>
 
-  <body class="vh-100">
+  <body class="vh-100 container">
     <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
-    <div class="h-100 d-flex justify-content-center align-items-center">
-      <form class="container-sm m-4 p-3 border border-2 border-dark rounded-3" onsubmit="return !1">
-        <fieldset class="row gx-0 mx-0">
-          <div class="col-12 col-md-3 text-md-center">
-            <label class="form-label" for="input-address">ETH Address:</label>
+    <div class="h-100 row justify-content-center align-items-center">
+      <form class="col-6 col-md-7 container-lg m-4 p-3 border border-2 border-dark rounded-3" onsubmit="return !1">
+        <fieldset class="row gx-0 mx-0 align-items-center">
+          <div class="col-12 col-lg-3 text-lg-center">
+            <label class="form-label my-0" for="input-address">ETH Address:</label>
           </div>
-          <div class="col-12 col-md-9"><input class="form-control" id="input-address" /></div>
+          <div class="col-12 col-lg-9">
+            <input class="form-control" id="input-address" />
+          </div>
         </fieldset>
-        <div class="row gx-0 mx-0">
-          <fieldset class="col-12 col-md-6 row gx-0 mx-0 mt-3">
-            <div class="col-12 col-md-6 text-md-center">
-              <label class="form-label" for="input-amount">Amount to send:</label>
+        <div class="row gx-0 mx-0 align-items-center">
+          <fieldset class="col-12 col-lg-6 row gx-0 mx-0 mt-3 align-items-center">
+            <div class="col-12 col-lg-6 text-lg-center">
+              <label class="form-label my-0" for="input-amount">Amount to send:</label>
             </div>
-            <div class="col-12 col-md-6"><input class="form-control" id="input-amount" /></div>
+            <div class="col-12 col-lg-6"><input class="form-control" id="input-amount" /></div>
           </fieldset>
-          <fieldset class="col-12 col-md-6 row gx-0 mx-0 mt-3">
-            <div class="col-12 col-md-6 text-md-center">
-              <label class="form-label" for="input-otp">OTP:</label>
+          <fieldset class="col-12 col-lg-6 row gx-0 mx-0 mt-3 align-items-center">
+            <div class="col-12 col-lg-6 text-lg-center">
+              <label class="form-label my-0" for="input-otp">OTP:</label>
             </div>
-            <div class="col-12 col-md-6"><input class="form-control" type="number" id="input-otp" /></div>
+            <div class="col-12 col-lg-6"><input class="form-control" type="number" id="input-otp" /></div>
           </fieldset>
         </div>
         <div class="mx-4 mt-4 mb-3 d-flex flex-row justify-content-end">
@@ -44,7 +46,12 @@
         </div>
       </form>
     </div>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.5.1/ethers.umd.min.js"
+      integrity="sha512-HeUha5ZM1Us9oi76YL1sz8HIj944iJggzblR6T8bw33PBjlulYPz3O66ayD5ON4PevOnUbmQiVKKoo+my1HhXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
