@@ -20,8 +20,9 @@ body {
   background-color: #193b4d;
 }
 form {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: whitesmoke;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   font-family: "Roobert", sans-serif;
   padding-top: 1rem;
 }
@@ -33,11 +34,11 @@ form {
 fieldset {
   background-color: #e2fca4;
   border-radius: 10px;
+  border: 1px solid grey;
 }
 .input-container {
   padding: 10px 10px;
 }
-
 @media only screen and (min-width: 768px) {
   fieldset {
     padding: 1rem 0 !important;
