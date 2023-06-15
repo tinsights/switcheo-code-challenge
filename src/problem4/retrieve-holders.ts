@@ -1,5 +1,5 @@
 import { BigNumberish, ethers } from "ethers";
-const ABI = require("./SWTHABI.json");
+import * as ABI from "./SWTHABI.json";
 const walletAddresses = [
   "0xb5d4f343412dc8efb6ff599d790074d0f1e8d430",
   "0x0020c5222a24e4a96b720c06b803fb8d34adc0af",

@@ -38,21 +38,31 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var ethers_1 = require("ethers");
 var ABI = require("./SWTHABI.json");
+var walletAddresses = [
+    "0xb5d4f343412dc8efb6ff599d790074d0f1e8d430",
+    "0x0020c5222a24e4a96b720c06b803fb8d34adc0af",
+    "0xd1d8b2aae2ebb2acf013b803bc3c24ca1303a392",
+];
 function main() {
     return __awaiter(this, void 0, void 0, function () {
-        var provider, contractAddress, contract, balance;
+        var provider, contractAddress, contract;
         return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    provider = new ethers_1.ethers.JsonRpcProvider("https://bsc-dataseed1.binance.org/");
-                    contractAddress = "0xC0ECB8499D8dA2771aBCbF4091DB7f65158f1468";
-                    contract = new ethers_1.ethers.Contract(contractAddress, ABI, provider);
-                    return [4 /*yield*/, contract.balanceOf("0xb5d4f343412dc8efb6ff599d790074d0f1e8d430")];
-                case 1:
-                    balance = _a.sent();
-                    console.log(balance);
-                    return [2 /*return*/];
-            }
+            provider = new ethers_1.ethers.JsonRpcProvider("https://bsc-dataseed1.binance.org/");
+            contractAddress = "0xC0ECB8499D8dA2771aBCbF4091DB7f65158f1468";
+            contract = new ethers_1.ethers.Contract(contractAddress, ABI.result, provider);
+            walletAddresses.forEach(function (addr) { return readBalance(contract, addr); });
+            return [2 /*return*/];
+        });
+    });
+}
+function readBalance(contract, address) {
+    return __awaiter(this, void 0, void 0, function () {
+        var balance;
+        return __generator(this, function (_a) {
+            balance = contract.balanceOf(address).then(function (bal) {
+                console.log(address, ethers_1.ethers.formatUnits(bal, 8));
+            });
+            return [2 /*return*/];
         });
     });
 }
